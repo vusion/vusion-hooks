@@ -17,5 +17,8 @@
     "vusion",
     "git",
     "hooks"
-  ]
+  ],
+  "dependencies": {
+    "shelljs": "^0.8.2"
+  }
 }
