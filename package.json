@@ -1,7 +1,7 @@
 {
   "name": "vusion-hooks",
   "description": "Git hooks for developing Vusion repositories",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "author": "Rainfore <rainforest92@126.com>",
   "bugs": {
     "url": "http://github.com/vusion/vusion-hooks/issues"
