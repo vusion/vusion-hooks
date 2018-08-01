@@ -25,9 +25,9 @@ function lint(type, files) {
     const { code, stdout, stderr } = shell.exec(`node node_modules/.bin/${type} --fix ${filesString}  --color`, { silent: false });
     if (!code) {
         gitReadd(filesString);
-        shell.echo('\n\033[42m' + typeUpper + ' SUCCEEDED\033[0m\n');
+        shell.echo('\n\033[0m\033[42m' + typeUpper + ' SUCCEEDED\033[0m\n');
     } else {
-        shell.echo('\n\033[41m' + typeUpper + ' FAILED:\033[0m Fix ' + type + ' errors and try again\n');
+        shell.echo('\n\033[0m\033[41m' + typeUpper + ' FAILED:\033[0m Fix ' + type + ' errors and try again\n');
         shell.exit(1);
     }
 }
