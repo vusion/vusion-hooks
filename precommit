@@ -13,7 +13,8 @@ function lint(type, files) {
 
     const typeUpper = type === 'eslint' ? 'ESLint' : 'StyleLint';
     const filesCount = files.length;
-    const filesString = files.map((file) => `'${file}'`).join(' ');
+    // Linting nonexistent files is now a fatal error in eslint@5.x
+    const filesString = files.filter((file) => fs.existsSync(file)).map((file) => `'${file}'`).join(' ');
 
     shell.echo(`${typeUpper}ing ${filesCount} files`);
 
